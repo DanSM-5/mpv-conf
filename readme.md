@@ -7,7 +7,7 @@ This repository is just a backup of personal preferences and configurations for 
 Dependencies:
 * yt-dlp
 
-Lua Plugins:
+Lua Scripts:
 * Sponsorblock ([more info](https://github.com/po5/mpv_sponsorblock))
 
 Pre-configurations
