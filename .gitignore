@@ -1,2 +1,4 @@
 
 scripts/*
+!scripts/user-input.lua
+!scripts/reload.lua
