@@ -1,9 +1,4 @@
 
-scripts/*
 cache/*
 watch_later/*
-
-# Keep
-!scripts/user-input.lua
-!scripts/reload.lua
 
