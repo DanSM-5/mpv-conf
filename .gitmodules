@@ -4,3 +4,6 @@
 [submodule "scripts/mpv_sponsorblock"]
 	path = scripts/mpv_sponsorblock
 	url = git@github-personal:DanSM-5/mpv_sponsorblock
+[submodule "scripts/mpv-gif-generator"]
+	path = scripts/mpv-gif-generator
+	url = git@github-personal:DanSM-5/mpv-gif-generator
