@@ -1,4 +1,5 @@
 
 cache/*
 watch_later/*
+*.ignore
 
