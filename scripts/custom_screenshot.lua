@@ -1,11 +1,18 @@
 -- Script to handle storing screenshots with a name based on the video.
 
+---@class Config
+---@field extension string
+
 -- Change screenshot extension
-local extension = 'jpg'
+---@type Config
+local config = {
+  extension = 'jpg',
+}
 
 -- mpv built-in modules
 local mp = require('mp')
 local msg = require('mp.msg')
+mp.options = require('mp.options')
 
 ---Check if the current playing asset is a video from the filesystem (local)
 ---@return boolean If the playing asset is local
@@ -56,10 +63,11 @@ local get_file_name = function ()
   local file_path = get_save_location() .. '/' ..  clean_string(filename)
 
   local file = nil
+  mp.options.read_options(config, 'custom_screenshot')
 
   -- increment filename
   for i = 0, 9999 do
-    local potential_name = string.format('%s_%04d.%s', file_path, i, extension)
+    local potential_name = string.format('%s_%04d.%s', file_path, i, config.extension)
     if not file_exists(potential_name) then
       file = potential_name
       break
